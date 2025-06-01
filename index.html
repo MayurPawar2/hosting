@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Showroom</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@500&display=swap"
+        rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@200;300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="MAIN">
+        <header class="header">
+            <div class="topArea">
+                <div class="logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZF9rf1htajtlbr2O4wTEiRk5XQVjbFRgQ2pezWoELWBT3G6tu-yvcEohhPOC3rvrr344&usqp=CAU"
+                        alt="Company Logo">
+                </div>
+                <div class="showroomName">
+                    <h1>Bike Showroom</h1>
+                </div>
+                <div class="searchBox">
+                    <input type="text" id="carSearchBox" placeholder="Search Bikes Here...">
+                    <button id="search"></button>
+                </div>
+                <div class="loginRegister">
+                    <img src="https://th.bing.com/th/id/OIP.IeljPMveO9YtvN6O6cQ7VwHaHa?w=561&h=561&rs=1&pid=ImgDetMain"
+                        alt="loginImg">
+                    <a href="">Login / Register</a>
+                </div>
+            </div>
+            <div class="bottomArea">
+                <div class="options">
+                    <ul>
+                        <li id="li1">BIKES<i></i>
+                            <div class="hidden1">
+                                <a href="#" onclick="sendText('bikes','new_bikes')">New Bikes</a>
+                                <a href="#">Best Bikes</a>
+                                <a href="#">Popular Brands</a>
+                                <a href="#">Budget Bikes</a>
+                            </div>
+                        </li>
+                        <li id="li2">SCOOTERS<i></i>
+                            <div class="hidden2">
+                                <a href="#">New Scooters</a>
+                                <a href="#">Best Scooters</a>
+                                <a href="#">Popular Brands</a>
+                                <a href="#">Budget Scooters</a>
+                            </div>
+                        </li>
+                        <li id="li3">ELECTRIC<i></i>
+                            <div class="hidden3">
+                                <a href="#">New EV's</a>
+                                <a href="#">Popular Brands</a>
+                                <a href="#">Ranges</a>
+                            </div>
+                        </li>
+                        <li id="li4">SPORTS<i></i>
+                            <div class="hidden4">
+                                <a href="#">Racing Bikes</a>
+                                <a href="#">Dirt Bikes</a>
+                                <a href="#">Newest</a>
+                            </div>
+                        </li>
+                        <li id="li5">COMPARE<i></i>
+                            <div class="hidden5">
+                                <a href="#">Between Regular</a>
+                                <a href="#">Between EV's</a>
+                                <a href="#">Between Sports</a>
+                                <a href="#">On Price</a>
+                                <a href="#">On Performance</a>
+                            </div>
+                        </li>
+                        <li id="li6">SELL</li>
+                        <li id="li7">CONTACT</li>
+                        <li id="li8">MORE</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- ---------------------------------------------------------------- -->
+
+        <div class="mainContent">
+
+            <div class="MainDiv1">
+                <div class="searchBike">
+                    <form id="vehiceForm" method="post">
+                        <p>Search the right bike</p>
+                        <div class="option">
+                            <input type="button" id="b1" value="New Bike" checked>
+                            <input type="button" id="b2" value="Used Bike">
+                        </div>
+                        <div class="newbike" id="newbike">
+                            <div class="selection">
+                                <select name="brand" id="brand">
+                                    <option value="disabled selected">Select Brand</option>
+                                    <option value="">TVS</option>
+                                    <option value="">Bajaj</option>
+                                    <option value="">Royal Enfield</option>
+                                    <option value="">Yamaha</option>
+                                    <option value="">Honda</option>
+                                    <option value="">Hero</option>
+                                    <option value="">Suzuki</option>
+                                </select><br>
+                                <select name="budget" id="budget">
+                                    <option value="disabled selected">Select Budget</option>
+                                    <option value="">Rs. 15,000 - 30,000</option>
+                                    <option value="">Rs. 30,000 - 50,000</option>
+                                    <option value="">Rs. 50,000 - 70,000</option>
+                                    <option value="">Rs. 70,000 - 1 Lakh</option>
+                                    <option value="">Rs. 1 - 2 Lakh</option>
+                                    <option value="">Rs. 2 - 5 Lakh</option>
+                                    <option value="">Above 5 Lakh</option>
+                                </select>
+                                <div class="button">
+                                    <input type="button" value="Search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="usedbike" id="usedbike">
+                            <div class="selection">
+                                <select name="usedBudget" id="usedBudget">
+                                    <option value="disabled selected">Select Budget</option>
+                                    <option value="">Under 15,000</option>
+                                    <option value="">Rs. 15,000 - 30,000</option>
+                                    <option value="">Rs. 30,000 - 50,000</option>
+                                    <option value="">Rs. 50,000 - 70,000</option>
+                                    <option value="">Rs. 70,000 - 1 Lakh</option>
+                                    <option value="">Rs. 1 - 2 Lakh</option>
+                                    <option value="">Rs. 2 - 5 Lakh</option>
+                                    <option value="">Above 5 Lakh</option>
+                                </select><br>
+                                <select name="usedCity" id="usedCity">
+                                    <option value="disabled selected">Select City</option>
+                                    <option value="">Ahmedabad</option>
+                                    <option value="">Bengalore</option>
+                                    <option value="">Chennai</option>
+                                    <option value="">Delhi</option>
+                                    <option value="">Islampur</option>
+                                </select>
+                                <div class="button">
+                                    <input type="submit" value="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------- -->
+            <div class="MainDiv2">
+
+                <div class="cari">
+                    <h2>Bikes in Spotlight</h2>
+                    <div class="specification">
+                        <ul>
+                            <li id="spl1">Most Popular</li>
+                            <li id="spl2">Sport Bikes</li>
+                            <li id="spl3">Best Mileage Bikes</li>
+                        </ul>
+                    </div>
+
+                    <div class="bikeii">
+
+                        <button class="backword" id="backword"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="btn">
+                            <ul id="ul1">
+                                <li>
+                                    <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/494X300/mt-15-2-062e4b1bb4ffad.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Yamaha MT 15</p>
+                                    <p><b>Rs 1.67 - 1.73 Lakh* </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/hero-motocorp/hero-motocorp-splendor/494X300/hero-motocorp-splendor63fca3a4dce49.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Hero Splendor Plus</p>
+                                    <p><b>Rs 75,141 - 76,486* </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/honda/activa-6g/494X300/activa-6g63ce6f641ff4e.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Honda Activa 6G</p>
+                                    <p><b>Rs 76,234 - 82,734</b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/royal-enfield/classic350/494X300/classic3506131bb8729f70.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Royal Enfield Classic 350</p>
+                                    <p><b>Rs 1.93 - 2.25 Lakh </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/suzuki/bs6-access-125/494X300/bs6-access-1256401e41c3797e.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Suzuki Access 125</p>
+                                    <p><b>Rs 79,899 - 90,000</b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/tvs/raider/494X300/raider6391b0dc795bf.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>TVS Raider</p>
+                                    <p><b>Rs 95,219 - 1.03 Lakh</b></p><input type="button" value="View Year-End Offer">
+                                </li>
+
+                            </ul>
+                            <ul id="ul2">
+                                <li>
+                                    <img src="https://bd.gaadicdn.com/processedimages/yamaha/mt-15-2-0/494X300/mt-15-2-062e4b1bb4ffad.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Yamaha MT 15</p>
+                                    <p><b>Rs 1.67 - 1.73 Lakh* </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li>
+                                    <img src="https://bd.gaadicdn.com/processedimages/bajaj/bajaj-pulsar-200-ns/494X300/bajaj-pulsar-200-ns64104e947f2e0.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Bajaj Pulsar NS200</p>
+                                    <p><b>Rs 1.49 Lakh* </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/kawasaki/kawasaki-ninja-zx-10r/494X300/kawasaki-ninja-zx-10r63198df019f4e.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Kawasaki Ninja ZX-10R</p>
+                                    <p><b> Rs 15.99 - 16.47 Lakh*</b></p><input type="button"
+                                        value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/aprilia/rs440/494X300/rs44064fac05607dd8.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Aprilia RS 457
+                                    </p>
+                                    <p><b> Rs 4.25 Lakh </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/ktm/2021-rc-200/494X300/2021-rc-200616eb234421de.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>KTM RC 200
+                                    </p>
+                                    <p><b> Rs 2.18 Lakh*</b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                            </ul>
+                            <ul id="ul3">
+                                <li>
+                                    <img src="https://bd.gaadicdn.com/processedimages/hero-motocorp/hero-motocorp-splendor/494X300/hero-motocorp-splendor63fca3a4dce49.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Hero Splendor Plus
+                                    </p>
+                                    <p><b> Rs 75,141 - 76,486* </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li>
+                                    <img src="https://bd.gaadicdn.com/processedimages/tvs/raider/494X300/raider6391b0dc795bf.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>TVS Raider
+                                    </p>
+                                    <p><b>Rs 95,219 - 1.03 Lakh* </b></p><input type="button"
+                                        value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/honda/sp-125/494X300/sp-125646c75d0667b8.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Honda SP 125
+                                    </p>
+                                    <p><b> Rs 86,017 - 90,567*</b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/bajaj/pulsar-ns-125/494X300/pulsar-ns-125611b855108045.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Aprilia RS 457 @
+                                    </p>
+                                    <p><b> Rs 4.25 Lakh </b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                                <li> <img
+                                        src="https://bd.gaadicdn.com/processedimages/yamaha/ray-zr-125/494X300/ray-zr-12564e0603ae7adf.jpg?imwidth=250&impolicy=resize"
+                                        alt="Bike Image">
+                                    <br><br>
+                                    <p>Bajaj Pulsar NS 125
+
+                                    </p>
+                                    <p><b> Rs 99,571</b></p><input type="button" value="View Year-End Offer">
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="fordword" id="forword"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------------------------------- -->
+
+            <div class="MainDiv3">
+                <div class="bikeNews">
+                    <div class="NewsHeading">
+                        Bike News
+                    </div>
+                    <div class="news1">
+                        <div class="info1">
+                            <img src="https://www.rushlane.com/wp-content/uploads/2023/12/tork-electric-scooter-spotted-testing-in-india-alongside-new-kratos-bike-2-696x392.jpg" alt="image1">
+                            <h4>Tork Electric Scooter Spotted Testing for the first time.</h4> 
+                            <h6>AlongSide Tork electric scooter spotted,there was a Tork electric motorcycle test mule as well- Both wrapped with similar camouflage.The push towards electric mobility has turned out to be more popular with 2W vehicles than 4W,owing too much lower upfront cost.</h6>
+                        </div>
+                    </div>
+                    <div class="news2">
+                        <div class="info2">
+                            <img src="https://www.rushlane.com/wp-content/uploads/2023/12/kawasaki-w175-street-launched-in-india-for-rs-1.35-lakh-introductory-4-696x392.jpg" alt="image1">
+                            <h4>Kawasaki W175 Street Launched For Rs. 1.35 Lakh – Features Added, Price Slashed.</h4> 
+                            <h6>The new prices for Kawasaki W175 Street has been reduced by Rs. 12,000 at Rs. 1.35 lakh (ex-sh), which is introductory for a limited period.</h6>
+                        </div>
+                    </div>
+                    <div class="news3">
+                        <div class="info3">
+                            <img src="https://www.rushlane.com/wp-content/uploads/2023/12/bajaj-vector-name-trademarked-in-india-696x392.jpg" alt="image1">
+                            <h4>Bajaj Vector Name Trademarked- Production Name of Husqvarna Vektorr?</h4> 
+                            <h6>The recent Bajaj Vector name trademarked by the company has a high probability of being the production name of Husqvarna Vektorr concept.If Bajaj is cooking a new scooter in its kitchen, the recently trademarked “Bajaj Vector” name could be a fitting name for this hypothetical product.</h6>                        
+                        </div>
+                    </div>
+                    <div class="news4">
+                        <div class="info4">
+                            <img src="https://www.rushlane.com/wp-content/uploads/2023/08/harley-davidson-x440-price-hike-696x392.jpg" alt="image1">
+                            <h4>Motorcycle Sales 300cc to 500cc Nov 2023 – Bullet, KTM 390, Harley X440, Triumph 400, Jawa, Yezdi.</h4> 
+                            <h6>Motorcycle Sales in India’s 300-500cc Category Witness Robust Growth in November 2023.In the vibrant landscape of India’s motorcycle market, the 300cc to 500cc segment has witnessed a substantial surge in sales during November 2023.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------------------------------------------------- -->
+
+            <div class="MainDiv4">
+                <div class="container">
+                    <h1>Bikes in your City</h1>
+            
+                    <ul class="city-list">
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/ahmedabad.svg" alt="Ahmedabad" class="city-logo">
+                            <br>Ahmedabad
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/bangalore.svg" alt="Bangalore" class="city-logo">
+                            <br>Bangalore
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/chandigarh.svg" alt="Chandigarh" class="city-logo">
+                            <br>Chandigarh
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/chennai.svg" alt="Chennai" class="city-logo">
+                            <br>Chennai
+                        </li>
+                    </ul>
+            
+                    <ul class="city-list">
+                        
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/delhi.svg" alt="Delhi" class="city-logo">
+                            <br>Delhi
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/ghaziabad.svg" alt="Ghaziabad" class="city-logo">
+                            <br>Ghaziabad
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/gurgaon.svg" alt="Gurgaon" class="city-logo">
+                            <br>Gurgaon
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/hyderabad.svg" alt="Hyderabad" class="city-logo">
+                            <br>Hyderabad
+                        </li>
+                    </ul>
+            
+                    <ul class="city-list">
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/jaipur.svg" alt="Jaipur" class="city-logo">
+                            <br>Jaipur
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/kolkata.svg" alt="Kolkata" class="city-logo">
+                            <br>Kolkata
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/lucknow.svg" alt="Lucknow" class="city-logo">
+                            <br>Lucknow
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/mumbai.svg" alt="Mumbai" class="city-logo">
+                            <br>Mumbai
+                        </li>
+                    </ul>
+            
+                    <ul class="city-list">
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/noida.svg" alt="Noida" class="city-logo">
+                            <br>Noida
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/patna.svg" alt="Patna" class="city-logo">
+                            <br>Patna
+                        </li>
+                        <li class="city-list-item">
+                            <img src="https://bd.gaadicdn.com/pwa/img/pune.svg" alt="Pune" class="city-logo">
+                            <br>Pune
+                        </li>
+                    </ul>
+            
+                    <h2>Search Bikes in your City...</h2>
+            
+                    <div class="dropdown">
+            
+                        <input list="cities" id="cityDropdown" placeholder=" Enter your city ">
+                        <datalist id="cities">
+                            <option value="Ahmedabad">
+                            <option value="Bangalore">
+                            <option value="Chandigarh">
+                            <option value="Chennai">
+                            <option value="Delhi">
+                            <option value="Ghaziabad">
+                            <option value="Gurgaon">
+                            <option value="Hyderabad">
+                            <option value="Jaipur">
+                            <option value="Kolkata">
+                            <option value="Lucknow">
+                            <option value="Mumbai">
+                            <option value="Noida">
+                            <option value="Patna">
+                            <option value="Pune">
+                                
+                        </datalist>
+                    </div>
+                </div>
+            
+            </div>
+            <!-- -------------------------------------------------- -->
+
+            <div class="Footer">
+                <footer>
+                    <h2>BikeShowroom Group</h2>
+                    <div class="middium">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0eWd7uRLIBqFjFiyRAd19qiyZu_8IR8gL0Q&usqp=CAU"
+                            alt="img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-_3l652fEvoaHwi3F-MtgFxmaFfMbQWridw&usqp=CAU"
+                            alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFlqYy24tsuILCsEizoDQKeAMof4d9ETdxg&usqp=CAU"
+                            alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiLmhDV0j3qIrhcF-mzjgvcgLgrOuSFs_6vQ&usqp=CAU"
+                            alt="">
+                    </div>
+                    <div class="logo_and_list">
+                        <ul>
+                            <li>About Us</li>
+                            <li>Contact Us</li>
+                            <li>Terms and Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>Feedback</li>
+                        </ul>
+                        <div class="fallow">
+                             <h4>Follow Us:</h4>&nbsp;&nbsp;
+                             <i class="fa-brands fa-facebook"></i>
+                             <i class="fa-brands fa-square-twitter"></i>
+                             <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div class="playstore">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtgk4ln7ePqYbtkbKfXxbySsTNvQcFNmlqA&usqp=CAU" alt="">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlcvdhOOeHnrhgHj-fV4ypp8OH4GPaDFJttw&usqp=CAU" alt="">
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // function for header options.
+        function sendText(dbName,tableName) {
+            console.log('Clicked!');
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'bikes.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            var params = 'dbName=' + encodeURIComponent(dbName) + '&tableName=' + encodeURIComponent(tableName);
+    
+            xhr.send(params);
+        }
+        //--------------------------------
+        var Budget = document.getElementById("b1");
+        var Model = document.getElementById("b2");
+        Budget.style.backgroundColor = "black";
+        Budget.style.color = "white";
+        Budget.addEventListener("click", function () {
+            Budget.style.backgroundColor = "black";
+            Budget.style.color = "white";
+            Model.style.backgroundColor = "";
+            Model.style.color = "";
+        });
+        Model.addEventListener("click", function () {
+            Budget.style.backgroundColor = "";
+            Budget.style.color = "";
+            Model.style.backgroundColor = "black";
+            Model.style.color = "white";
+
+        });
+        function newbike() {
+            var newbike = document.getElementById("newbike");
+            var usedbike = document.getElementById("usedbike");
+            newbike.style.display = "block";
+            usedbike.style.display = "none"
+        }
+        function usedbike() {
+            var newbike = document.getElementById("newbike");
+            var usedbike = document.getElementById("usedbike");
+            newbike.style.display = "none";
+            usedbike.style.display = "block"
+        }
+
+        let scrollbtn = document.querySelector(".btn");
+        let back = document.getElementById("backword");
+        let goforword = document.getElementById("forword");
+        back.addEventListener("click", () => {
+            scrollbtn.style.scrollBehavior = "smooth";
+            back.style.display = scrollbtn.scrollLeft > 0 ? "block" : "none";
+            goforword.style.display = scrollbtn.scrollLeft < scrollbtn.scrollWidth - scrollbtn.clientWidth ? "block" : "none";
+            scrollbtn.scrollLeft -= 400;
+        });
+        goforword.addEventListener("click", () => {
+            scrollbtn.style.scrollBehavior = "smooth";
+            back.style.display = scrollbtn.scrollLeft > -400 ? "block" : "none";
+            scrollbtn.scrollLeft += 400;
+            goforword.style.display = scrollbtn.scrollLeft < scrollbtn.scrollWidth - scrollbtn.clientWidth ? "block" : "none";
+        });
+
+        // -------------------------------------------
+        var spl1 = document.getElementById("spl1");
+        var spl2 = document.getElementById("spl2");
+        var spl3 = document.getElementById("spl3");
+
+        spl1.style.borderBottom = "2px solid blue";
+        spl1.style.color = "blue";
+
+        var firstUl = document.getElementById("ul1");
+        var secondUl = document.getElementById("ul2");
+        var third = document.getElementById("ul3");
+
+        spl1.addEventListener("click", () => {
+            spl1.style.borderBottom = "2px solid blue";
+            spl1.style.color = "blue";
+            spl2.style.borderBottom = "";
+            spl2.style.color = "";
+            spl3.style.borderBottom = "";
+            spl3.style.color = "";
+
+            firstUl.style.display = "block";
+            firstUl.style.display = "flex";
+            secondUl.style.display = "none";
+        });
+        spl2.addEventListener("click", () => {
+            spl1.style.borderBottom = "";
+            spl1.style.color = "";
+            spl2.style.borderBottom = "2px solid blue";
+            spl2.style.color = "blue";
+            spl3.style.borderBottom = "";
+            spl3.style.color = "";
+
+            third.style.display = "none";
+            secondUl.style.display = "block";
+            secondUl.style.display = "flex";
+            firstUl.style.display = "none";
+        });
+        spl3.addEventListener("click", () => {
+            spl1.style.borderBottom = "";
+            spl1.style.color = "";
+            spl2.style.borderBottom = "";
+            spl2.style.color = "";
+            spl3.style.borderBottom = "2px solid blue";
+            spl3.style.color = "blue";
+
+            third.style.display = "block";
+            third.style.display = "flex";
+            secondUl.style.display = "none";
+            firstUl.style.display = "none";
+
+        });
+    </script>
+    
+</body>
+
+</html>
